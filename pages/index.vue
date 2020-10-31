@@ -9,7 +9,7 @@
           suscipit veritatis perspiciatis reprehenderit atque sed praesentium
           doloribus.
         </p>
-        <a href="#" class="hero__btn gradient-btn">contact button</a>
+        <a href="#" class="gradient-btn">contact button</a>
       </div>
     </section>
     <!-- SHOWCASE -->
@@ -113,7 +113,7 @@
     <section class="cta">
       <div class="cta__wrapper container">
         <h3 class="cta__text">some text about getting in touch</h3>
-        <a href="#" class="hero__btn gradient-btn">contact button</a>
+        <a href="#" class="gradient-btn">contact button</a>
       </div>
     </section>
   </div>

@@ -30,6 +30,7 @@ export default {
 
   .container {
     height: 100px;
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -83,6 +84,16 @@ export default {
         }
       }
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 0 24px;
+  }
+
+  .nav {
+    display: none;
   }
 }
 </style>

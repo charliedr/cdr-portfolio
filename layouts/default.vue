@@ -45,6 +45,7 @@ html {
 }
 
 .container {
+  position: relative;
   width: 100%;
   max-width: 1200px;
 }
@@ -61,6 +62,19 @@ html {
   margin: 2px;
   text-decoration: none;
   // border-radius: 0 2rem 0 2rem;
+  z-index: 1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #121212;
+    // border-radius: 0 2rem 0 2rem;
+    z-index: -1;
+  }
 
   &::before {
     content: "";
@@ -71,7 +85,7 @@ html {
     height: calc(100% + 4px);
     background: linear-gradient(90deg, #369aff, #ff658a);
     // border-radius: 0 2rem 0 2rem;
-    z-index: -1;
+    z-index: -2;
   }
 }
 
@@ -92,6 +106,12 @@ html {
     width: 100%;
     height: 2px;
     background: linear-gradient(90deg, #369aff, #ff658a);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 0 24px;
   }
 }
 </style>
