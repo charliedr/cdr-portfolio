@@ -143,6 +143,7 @@ export default {};
     color: #fff;
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
+    line-height: 1.5;
     max-width: 50%;
     margin: 16px 0 48px;
   }
@@ -288,6 +289,120 @@ export default {};
     font-weight: 500;
     line-height: 55px;
     margin-bottom: 32px;
+  }
+}
+
+// MEDIA QUERIES
+@media (max-width: 576px) {
+  .hero {
+    text-align: center;
+
+    &__title {
+      font-size: 32px;
+      line-height: 48px;
+      font-weight: 500;
+    }
+
+    &__desc {
+      max-width: 100%;
+      line-height: 1.5;
+    }
+  }
+
+  .showcase {
+    &__pic {
+      height: 400px;
+      width: 100vw;
+
+      img {
+        height: 90%;
+      }
+    }
+  }
+
+  .about-me {
+    margin-top: 48px;
+
+    &__text {
+      font-size: 20px;
+      line-height: 32px;
+      margin-bottom: 32px;
+    }
+  }
+
+  .my-work {
+    margin-top: 150px;
+
+    &__grid {
+      grid-template-columns: repeat(1, 1fr);
+      margin-top: 48px;
+    }
+  }
+
+  .cta {
+    margin-top: 150px;
+    text-align: center;
+
+    &__text {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+}
+
+@media (min-width: 577px) and (max-width: 1199px) {
+  .hero {
+    text-align: center;
+
+    &__title {
+      font-size: 32px;
+      line-height: 48px;
+      font-weight: 500;
+    }
+
+    &__desc {
+      max-width: 100%;
+      line-height: 1.5;
+    }
+  }
+
+  .showcase {
+    &__pic {
+      height: 400px;
+      width: 80%;
+
+      img {
+        height: 100%;
+      }
+    }
+  }
+
+  .about-me {
+    margin-top: 48px;
+
+    &__text {
+      font-size: 20px;
+      line-height: 32px;
+      margin-bottom: 32px;
+    }
+  }
+
+  .my-work {
+    margin-top: 150px;
+
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 48px;
+    }
+  }
+
+  .cta {
+    text-align: center;
+
+    &__text {
+      font-size: 24px;
+      line-height: 32px;
+    }
   }
 }
 </style>

@@ -109,9 +109,21 @@ html {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .container {
     margin: 0 24px;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 1199px) {
+  .container {
+    margin: 0 10%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    margin: 0 10%;
   }
 }
 </style>

@@ -1,7 +1,10 @@
 <template>
   <section class="footer">
     <div class="container">
-      <div class="copyright">&copy; copyright</div>
+      <div class="copyright">
+        &copy;{{ new Date().getFullYear() }}
+        copyright stuff
+      </div>
     </div>
   </section>
 </template>
@@ -32,6 +35,12 @@ export default {
       font-weight: 400;
       line-height: 24px;
     }
+  }
+}
+
+@media (max-width: 576px) {
+  .footer {
+    margin-top: 150px;
   }
 }
 </style>
