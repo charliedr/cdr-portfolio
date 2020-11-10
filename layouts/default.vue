@@ -31,7 +31,7 @@ html,
 body {
   width: 100%;
   height: 100%;
-  background-color: #121212;
+  background-color: #0d0d0d;
 }
 
 html {
@@ -53,7 +53,7 @@ html {
 .gradient-btn {
   position: relative;
   display: inline-block;
-  color: #fff;
+  color: #f8f8f8;
   background: #121212;
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
@@ -84,14 +84,21 @@ html {
     width: calc(100% + 4px);
     height: calc(100% + 4px);
     background: linear-gradient(90deg, #369aff, #ff658a);
+    background-size: 150%;
+    background-position: center left;
     // border-radius: 0 2rem 0 2rem;
     z-index: -2;
+    transition: 0.2s ease-in-out all;
+  }
+
+  &:hover::before {
+    background-position: center right;
   }
 }
 
 .link {
   position: relative;
-  color: #fff;
+  color: #f8f8f8;
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   font-weight: 500;
@@ -106,9 +113,28 @@ html {
     width: 100%;
     height: 2px;
     background: linear-gradient(90deg, #369aff, #ff658a);
+    background-size: 150%;
+    background-position: center left;
+    transition: 0.2s ease-in-out all;
+  }
+
+  &:hover::before {
+    background-position: center right;
   }
 }
 
+// PAGE TRANSITIONS
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.5s ease-in-out;
+}
+
+.page-enter,
+.page-leave-active {
+  opacity: 0;
+}
+
+// MEDIA QUERIES
 @media (max-width: 576px) {
   .container {
     margin: 0 24px;

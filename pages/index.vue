@@ -16,7 +16,7 @@
     <section class="showcase">
       <div class="container">
         <div class="showcase__pic">
-          <img src="@/assets/iphone.png" alt="iPhone mockup" />
+          <img src="@/assets/iphone-front.png" alt="iPhone mockup" />
         </div>
       </div>
     </section>
@@ -29,7 +29,7 @@
           because it's the trendy thing to do nowadays. Lorem ipsum dolor sit
           amet consectetur adipisicing elit.
         </p>
-        <a href="#" class="link">link to about page</a>
+        <NuxtLink to="/about" class="link">link to about page</NuxtLink>
       </div>
     </section>
     <!-- WORK -->
@@ -47,8 +47,10 @@
               </a>
             </div>
             <div class="card__content">
-              <div class="card__content--title">company name</div>
-              <div class="card__content--services">web design, strategy</div>
+              <div class="card__content--title">Phoebe For Mayor</div>
+              <div class="card__content--services">
+                web design, web development
+              </div>
             </div>
           </div>
           <div class="card">
@@ -58,8 +60,10 @@
               </a>
             </div>
             <div class="card__content">
-              <div class="card__content--title">company name</div>
-              <div class="card__content--services">web design, strategy</div>
+              <div class="card__content--title">DJ Johnson For State Rep</div>
+              <div class="card__content--services">
+                web design, web development
+              </div>
             </div>
           </div>
           <div class="card">
@@ -69,8 +73,10 @@
               </a>
             </div>
             <div class="card__content">
-              <div class="card__content--title">company name</div>
-              <div class="card__content--services">web design, strategy</div>
+              <div class="card__content--title">AXIOM Architecture</div>
+              <div class="card__content--services">
+                web design, web development, typography
+              </div>
             </div>
           </div>
           <div class="card">
@@ -120,7 +126,13 @@
 </template>
 
 <script>
-export default {};
+// import VerticalSlider from "./../components/VerticalSlider";
+
+export default {
+  components: {
+    // VerticalSlider,
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -129,10 +141,10 @@ export default {};
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: calc(100vh - 200px);
+  margin: 200px 0;
 
   &__title {
-    color: #fff;
+    color: #f8f8f8;
     font-family: "Poppins", sans-serif;
     font-size: 48px;
     line-height: 72px;
@@ -140,7 +152,7 @@ export default {};
   }
 
   &__desc {
-    color: #fff;
+    color: #f8f8f8;
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
     line-height: 1.5;
@@ -156,16 +168,45 @@ export default {};
   width: 100%;
 
   &__pic {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 80%;
     height: 600px;
-    background: linear-gradient(90deg, #5096ff, #3bffa4);
     margin-left: auto;
+    // background: linear-gradient(90deg, #5096ff, #3bffa4);
+    // background: linear-gradient(90deg, #369aff, #ff658a);
+    background: linear-gradient(90deg, #ff658a, #369aff);
+    background-size: 400% 400%;
+    animation: gradient 15s linear infinite;
+
+    @-webkit-keyframes gradient {
+      0% {
+        background-position: 0% 51%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 51%;
+      }
+    }
+    @keyframes gradient {
+      0% {
+        background-position: 0% 51%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 51%;
+      }
+    }
 
     img {
-      height: 70%;
+      max-height: 70%;
+      max-width: 100%;
     }
   }
 }
@@ -178,7 +219,7 @@ export default {};
   margin-top: 200px;
 
   &__text {
-    color: #fff;
+    color: #f8f8f8;
     font-family: "Open Sans", sans-serif;
     font-size: 24px;
     line-height: 48px;
@@ -199,7 +240,7 @@ export default {};
     justify-content: space-between;
 
     h1 {
-      color: #fff;
+      color: #f8f8f8;
       font-family: "Poppins", sans-serif;
       font-size: 48px;
       line-height: 72px;
@@ -221,8 +262,13 @@ export default {};
       &__img {
         height: 240px;
         width: 100%;
-        background: linear-gradient(90deg, #5096ff, #3bffa4);
+        background: linear-gradient(90deg, #369aff, #ff658a);
         background-size: cover;
+        transition: all 0.2s ease-out;
+
+        &:hover {
+          transform: scale(0.98);
+        }
 
         a {
           display: flex;
@@ -233,7 +279,7 @@ export default {};
 
           img {
             height: 85%;
-            transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-out;
             transform-origin: center;
           }
 
@@ -248,20 +294,20 @@ export default {};
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
-        padding: 24px 0;
+        padding: 16px 0;
 
         &--title {
-          color: #fff;
+          color: #f8f8f8;
           font-family: "Open Sans", sans-serif;
-          font-size: 20px;
-          line-height: 24px;
+          font-size: 18px;
+          line-height: 32px;
         }
 
         &--services {
           color: rgba(255, 255, 255, 0.7);
           font-family: "Open Sans", sans-serif;
-          font-size: 16px;
-          line-height: 24px;
+          font-size: 12px;
+          line-height: 18px;
         }
       }
     }
@@ -273,7 +319,7 @@ export default {};
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-top: 200px;
+  margin: 200px 0;
 
   &__wrapper {
     display: flex;
@@ -283,7 +329,7 @@ export default {};
   }
 
   &__text {
-    color: #fff;
+    color: #f8f8f8;
     font-family: "Open Sans", sans-serif;
     font-size: 32px;
     font-weight: 500;

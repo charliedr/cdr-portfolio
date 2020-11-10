@@ -17,11 +17,10 @@ export default {
 
 <style lang="scss" scoped>
 .footer {
-  background-color: #121212;
+  background-color: #0d0d0d;
   display: flex;
   justify-content: center;
   padding: 24px;
-  margin-top: 200px;
 
   div {
     display: flex;
@@ -29,7 +28,7 @@ export default {
     justify-content: center;
 
     .copyright {
-      color: rgba(255, 255, 255, 0.7);
+      color: rgba(248, 248, 248, 0.7);
       font-family: "Poppins", sans-serif;
       font-size: 16px;
       font-weight: 400;

@@ -1,13 +1,13 @@
 <template>
   <header class="navbar">
     <div class="container">
-      <h1 class="logo"><a href="#">logo</a></h1>
+      <h1 class="logo"><NuxtLink to="/">logo</NuxtLink></h1>
       <nav class="nav">
         <ul>
-          <li><a href="#">about</a></li>
-          <li><a href="#">work</a></li>
-          <li><a href="#">blog</a></li>
-          <li><a href="#">contact</a></li>
+          <li><NuxtLink to="/about">about</NuxtLink></li>
+          <li><NuxtLink to="#">work</NuxtLink></li>
+          <li><NuxtLink to="#">blog</NuxtLink></li>
+          <li><NuxtLink to="#">contact</NuxtLink></li>
         </ul>
       </nav>
     </div>
@@ -22,7 +22,8 @@ export default {
 
 <style lang="scss" scoped>
 .navbar {
-  background-color: #121212;
+  background-color: #0d0d0d;
+  width: 100%;
   height: 100px;
   display: flex;
   justify-content: center;
@@ -31,6 +32,7 @@ export default {
   .container {
     height: 100px;
     width: 100%;
+    max-width: 1200px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -43,7 +45,7 @@ export default {
       line-height: 32px;
 
       a {
-        color: #fff;
+        color: #f8f8f8;
         text-decoration: none;
       }
     }
@@ -63,7 +65,7 @@ export default {
             font-size: 1rem;
             font-weight: 400;
             line-height: 1.5rem;
-            color: #fff;
+            color: #f8f8f8;
             text-decoration: none;
 
             &::before {
