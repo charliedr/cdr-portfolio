@@ -5,8 +5,7 @@
       <nav class="nav">
         <ul>
           <li><NuxtLink to="/about">about</NuxtLink></li>
-          <li><NuxtLink to="#">work</NuxtLink></li>
-          <li><NuxtLink to="#">blog</NuxtLink></li>
+          <li><NuxtLink to="/work">work</NuxtLink></li>
           <li><NuxtLink to="#">contact</NuxtLink></li>
         </ul>
       </nav>

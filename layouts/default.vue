@@ -31,7 +31,7 @@ html,
 body {
   width: 100%;
   height: 100%;
-  background-color: #0d0d0d;
+  background-color: #0D0D0D;
 }
 
 html {
@@ -54,7 +54,7 @@ html {
   position: relative;
   display: inline-block;
   color: #f8f8f8;
-  background: #121212;
+  background: #0D0D0D;
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   line-height: 27px;
@@ -71,7 +71,7 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #121212;
+    background: #0D0D0D;
     // border-radius: 0 2rem 0 2rem;
     z-index: -1;
   }
