@@ -37,7 +37,7 @@
       <div class="container">
         <div class="my-work__header">
           <h1 class="my-work__title">work</h1>
-          <a href="#" class="link">link to work page</a>
+          <NuxtLink to="/work" class="link">link to work page</NuxtLink>
         </div>
         <div class="my-work__grid">
           <div class="card">
@@ -141,7 +141,7 @@ export default {
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin: 200px 0;
+  height: calc(100vh - 200px);
 
   &__title {
     color: #f8f8f8;

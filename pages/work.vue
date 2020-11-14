@@ -27,9 +27,10 @@ export default {
     return {
       portfolio: [
         // { title: 'AXIOM Architecture', link: '/', image: '_nuxt/assets/AXIOM-thumbnail.jpg'},
-        { title: 'AXIOM Architecture', link: '/', image: '@/assets/AXIOM-thumbnail.jpg'},
-        { title: 'DJ Johnson For State Rep', link: '/', image: '@/assets/DJ-thumbnail.jpg'},
-        { title: 'Phoebe For Mayor', link: '/', image: '@/assets/AXIOM-thumbnail.jpg'},
+        // Try looping through the file names separately for the background image
+        { title: 'AXIOM Architecture', link: '/', image: 'AXIOM-thumbnail.jpg'},
+        { title: 'DJ Johnson For State Rep', link: '/', image: 'DJ-thumbnail.jpg'},
+        { title: 'Phoebe For Mayor', link: '/', image: 'Phoebe-thumbnail.jpg'},
       ]
     }
   }
@@ -122,6 +123,7 @@ export default {
       color: #fff;
       z-index: 5;
       opacity: 0;
+      text-shadow: 0px 0px 4px #000000;
     }
 
     &:hover .portfolio__item--title{
@@ -134,6 +136,7 @@ export default {
 @media (max-width: 576px) {
   .work__hero {
     text-align: center;
+    margin: 100px 0;
 
     &--title {
       font-size: 32px;
@@ -147,6 +150,22 @@ export default {
       text-align: left;
     }
   }
+
+  .portfolio {
+    margin: 150px 0;
+    &__wrapper {
+      grid-template-columns: 1fr;
+    }
+
+    &__item {
+      &::after {
+        opacity: .65;
+      }
+      &--title {
+        opacity: 1;
+      }
+    }
+  }
 }
 
 @media (min-width: 577px) and (max-width: 1199px) {
@@ -158,16 +177,25 @@ export default {
       line-height: 48px;
       font-weight: 500;
       text-align: center;
-    }
-
-    &--desc {
-      max-width: 100%;
-      line-height: 1.5;
-      text-align: center;
 
       &::before {
         left: 50%;
         transform: translateX(-50%);
+      }
+    }
+  }
+
+  .portfolio {
+    &__wrapper {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__item {
+      &::after {
+        opacity: .65;
+      }
+      &--title {
+        opacity: 1;
       }
     }
   }

@@ -124,6 +124,7 @@ export default {};
 // MEDIA QUERIES
 @media (max-width: 576px) {
   .about__hero {
+    margin: 150px 0;
     text-align: center;
 
     &--title {
@@ -140,6 +141,8 @@ export default {};
   }
 
   .about__clients {
+    margin-bottom: 150px;
+    
     &--grid {
       grid-template-columns: repeat(2, 50%);
 
