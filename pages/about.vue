@@ -13,6 +13,54 @@
         </p>
       </div>
     </section>
+    <!-- EXPERIENCE -->
+    <div class="about__experience">
+      <div class="container">
+        <div class="about__experience--left">
+          <h2 class="about__experience--title">
+            experience
+          </h2>
+        </div>
+        <div class="about__experience--right">
+          <p class="about__experience--desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed unde sint nesciunt numquam consequatur, similique esse facere obcaecati cupiditate excepturi?</p>
+          <p class="about__experience--desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed unde sint nesciunt numquam consequatur, similique esse facere obcaecati cupiditate excepturi?</p>
+        </div>
+      </div>  
+    </div> 
+    <!-- skills -->
+    <div class="about__skills">
+      <div class="container">
+        <div class="about__skills--left">
+          <h2 class="about__skills--title">
+            skills
+          </h2>
+        </div>
+        <div class="about__skills--right">
+          <div>
+            <ul class='skills__list'>
+              <li class='skills__list--item'>HTML</li>
+              <li class='skills__list--item'>CSS</li>
+              <li class='skills__list--item'>SASS</li>
+              <li class='skills__list--item'>JavaScript</li>
+              <li class='skills__list--item'>Vue.js</li>
+              <li class='skills__list--item'>Nuxt.js</li>
+              <li class='skills__list--item'>Node.js</li>
+            </ul>
+          </div>
+          <div>
+            <ul class='skills__list'>
+              <li class='skills__list--item'>Web Design</li>
+              <li class='skills__list--item'>UI/UX Design</li>
+              <li class='skills__list--item'>Search Engine Optimization (SEO)</li>
+              <li class='skills__list--item'>Website Accessibility</li>
+              <li class='skills__list--item'>Adobe XD</li>
+              <li class='skills__list--item'>Adobe Photoshop</li>
+              <li class='skills__list--item'>Adobe Premiere</li>
+            </ul>
+          </div>
+        </div>
+      </div>  
+    </div> 
     <!-- CLIENTS -->
     <section class="about__clients">
       <div class="container">
@@ -95,12 +143,93 @@ export default {};
   }
 }
 
+.about__experience {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 64px;
+
+  > .container {
+    border-top: 1px solid #f8f8f8;
+    display: flex;
+    flex-direction: row;
+  }
+
+  &--left, &--right {
+    width: 50%;
+    padding-top: 24px;
+    // outline: 1px solid red;
+  }
+
+  &--title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #f8f8f8;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  &--desc {
+    color: #f8f8f8;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    padding-bottom: 16px;
+  }
+}
+
+.about__skills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 64px;
+
+  > .container {
+    border-top: 1px solid #f8f8f8;
+    display: flex;
+    flex-direction: row;
+  }
+
+  &--left, &--right {
+    width: 50%;
+    padding-top: 24px;
+  }
+
+  &--right {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+  }
+
+  &--title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #f8f8f8;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .skills__list {
+    list-style-type: none;
+    padding: 0;
+
+    &--item {
+      color: #f8f8f8;
+      font-family: "Open Sans", sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+  }
+}
+
 .about__clients {
   display: flex;
   // align-items: flex-start;
   justify-content: center;
   width: 100%;
-  margin-bottom: 200px;
+  margin: 200px 0;
 
   &--grid {
     display: grid;
