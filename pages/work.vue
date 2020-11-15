@@ -26,11 +26,9 @@ export default {
   data() {
     return {
       portfolio: [
-        // { title: 'AXIOM Architecture', link: '/', image: '_nuxt/assets/AXIOM-thumbnail.jpg'},
-        // Try looping through the file names separately for the background image
-        { title: 'AXIOM Architecture', link: '/', image: 'AXIOM-thumbnail.jpg'},
-        { title: 'DJ Johnson For State Rep', link: '/', image: 'DJ-thumbnail.jpg'},
-        { title: 'Phoebe For Mayor', link: '/', image: 'Phoebe-thumbnail.jpg'},
+        { title: 'AXIOM Architecture', link: '/', image: require('../static/AXIOM-thumbnail.jpg')},
+        { title: 'DJ Johnson For State Rep', link: '/', image:require('../static/DJ-thumbnail.jpg')},
+        { title: 'Phoebe For Mayor', link: '/', image: require('../static/Phoebe-thumbnail.jpg')},
       ]
     }
   }
