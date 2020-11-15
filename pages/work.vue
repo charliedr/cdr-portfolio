@@ -110,7 +110,7 @@ export default {
     &:hover::after {
       // background: rgba(0, 0, 0, 0.85);
       background: linear-gradient(90deg, #ff658a, #369aff);
-      opacity: 65%;
+      opacity: .65;
     }
 
     &--title {
